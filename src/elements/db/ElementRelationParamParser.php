@@ -187,7 +187,7 @@ class ElementRelationParamParser
 
                 foreach ($elements as $element) {
                     if (is_numeric($element)) {
-                        $relElementIds[] = $element;
+                        $relElementIds[] = intval($element);
                     } else if ($element instanceof ElementInterface) {
                         $relElementIds[] = $element->id;
                     } else if ($element instanceof ElementQueryInterface) {
